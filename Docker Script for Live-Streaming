@@ -1,0 +1,6 @@
+curl –sSL https://get.docker.com | sh
+
+sudo usermod pi –aG docker
+reboot
+docker pull alesellis2/streaming:07-05-2018
+docker run --privileged --name XXX –ti alexellis2/streaming:07-05-2018 XX-XXX-XXXX 
