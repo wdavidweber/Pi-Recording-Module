@@ -1,0 +1,16 @@
+from picamera import PiCamera
+from time import sleep
+import os
+
+camera = PiCamera()
+
+camera.resolution = (1280, 768)
+camera.framerate = 15
+camera.brightness = 70
+camera.start_preview()
+camera.start_recording(‘/home/pi/Videos/Recording.h264’)
+sleep(61200)
+
+os.system (‘ffmpeg -vcodec h264 -i Recording.h264 -vcodec copy -acodec copy Recording.mp4’)
+os.system (‘rclone sync /home/pi/Videos/Recording.mp4 picam:AA’)
+rm /home/pi/Videos/Recording.h264
