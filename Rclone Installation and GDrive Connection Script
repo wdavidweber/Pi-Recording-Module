@@ -1,0 +1,14 @@
+curl -L http://raw.github.com/pageauc/pi-timolo/master/source/pi-timolo-install.sh | bash
+rclone config
+n
+picam
+storage> 12
+client id>
+client_secret>
+scope> 1
+root_folder_id>
+service_account_file>
+y/n> n
+y/n> n
+y/n> n
+y/e/d> y
